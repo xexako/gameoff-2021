@@ -251,6 +251,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 752010598}
   gameOverPanel: {fileID: 752010597}
+  nextLevelButton: {fileID: 752010599}
+  startPanel: {fileID: 752010600}
 --- !u!4 &137362512
 Transform:
   m_ObjectHideFlags: 0
@@ -1376,6 +1378,18 @@ GameObject:
 --- !u!1 &752010598 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5118451718011680350, guid: baecf7175b4f33c40a5703c7c6d2cb3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 752010596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &752010599 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5118451718837336383, guid: baecf7175b4f33c40a5703c7c6d2cb3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 752010596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &752010600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 760836855864895913, guid: baecf7175b4f33c40a5703c7c6d2cb3d,
     type: 3}
   m_PrefabInstance: {fileID: 752010596}
   m_PrefabAsset: {fileID: 0}

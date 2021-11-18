@@ -617,6 +617,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 439914280}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &439914283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5118451718837336383, guid: baecf7175b4f33c40a5703c7c6d2cb3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 439914280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &439914284 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 760836855864895913, guid: baecf7175b4f33c40a5703c7c6d2cb3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 439914280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &483143474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2303,6 +2315,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 439914282}
   gameOverPanel: {fileID: 439914281}
+  nextLevelButton: {fileID: 439914283}
+  startPanel: {fileID: 439914284}
 --- !u!4 &1384455208
 Transform:
   m_ObjectHideFlags: 0
