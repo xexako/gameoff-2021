@@ -11,6 +11,10 @@ public class UIManager : MonoBehaviour
     public GameObject nextLevelButton;
     public GameObject startPanel;
 
+    public Image winTitle, defeatTitle;
+
+    private SoundManager sounds;
+
     private bool paused;
 
     private void Start()
@@ -21,6 +25,7 @@ public class UIManager : MonoBehaviour
         startPanel.SetActive(true);
         paused = true;
         Time.timeScale = 0;
+        sounds = GameObject.Find("SoundManager").GetComponent<SoundManager>();
     }
 
     private void Update()
@@ -55,8 +60,15 @@ public class UIManager : MonoBehaviour
         nextLevelButton.SetActive(display);
     }
 
+    public void DisplayPanelTitle(bool win)
+    {
+        winTitle.gameObject.SetActive(win);
+        defeatTitle.gameObject.SetActive(!win);
+    }
+
     public void LoadLevel(int levelId)
     {
+        sounds.PlayEffect("BUTTON");
         SceneManager.LoadScene(levelId);
     }
     
@@ -78,14 +90,19 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void ToggleGameOverPanel(bool win)
+    public void ToggleGameOverPanel(bool win, string sound)
     {
+        if (sound != null)
+        {
+            sounds.PlayEffect(sound);
+        }
         Time.timeScale = 0;
         DisplayPausePanel(false);
         paused = CalculateScale(false);
         startPanel.SetActive(paused);
         DisplayGameOverPanel(!gameOverPanel.activeSelf);
         DisplayNextLevelButton(win);
+        DisplayPanelTitle(win);
     }
 
     private bool CalculateScale(bool togglePausePanel)

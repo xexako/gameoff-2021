@@ -7,6 +7,6 @@ public class PlayerCollision : MonoBehaviour
     public UIManager uiman;
     public void Explode()
     {
-        uiman.ToggleGameOverPanel(false);
+        uiman.ToggleGameOverPanel(false, "DEFEAT");
     }
 }

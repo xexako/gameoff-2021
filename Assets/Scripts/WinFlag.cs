@@ -9,7 +9,7 @@ public class WinFlag : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            uiman.ToggleGameOverPanel(true);
+            uiman.ToggleGameOverPanel(true, "VICTORY");
         }
     }
 }
